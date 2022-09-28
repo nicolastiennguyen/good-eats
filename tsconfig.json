@@ -1,20 +1,25 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
+    "target": "ES2022",
+    // "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
+    // "allowJs": false,
+    // "skipLibCheck": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    // "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
     "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    // "resolveJsonModule": true,
+    // "isolatedModules": false,
+    // "noEmit": true,
+    // "jsx": "react-jsx",
+    "outDir": "./build",
+    "rootDir": "./src"
+  },
+  "ts-node": {
+    "esm": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
