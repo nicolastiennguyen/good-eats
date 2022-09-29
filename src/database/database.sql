@@ -3,7 +3,7 @@ CREATE DATABASE eats;
 \c eats;
 
 CREATE TABLE businesses (
-  id VARCHAR(1000),
+  id VARCHAR(1000) PRIMARY KEY,
   name VARCHAR(255),
   image_url VARCHAR(1000),
   url VARCHAR(1000),
