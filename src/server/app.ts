@@ -4,6 +4,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 import router from './routes'
+import axios from 'axios'
 
 const { Client } = require('pg');
 
@@ -37,6 +38,25 @@ app.use((req, res, next) => {
   next()
 })
 
+app.get("/yelp/:location/:limit", (req, res) => {
+  axios
+  .get(`https://api.yelp.com/v3/businesses/search`, {
+    headers: {
+      Authorization: `Bearer Gbp5j1Jg21WTUzhuq-P3U5PjDAeXOgChj7q7cshsZkSW_mqueLARN62xNq2Opf8h7jYz8LQ4sgXv8QDOr6h9n72nV8kKOnB-w8jMBHegau_gU4_goqDS8n7lzDYzY3Yx`,
+    },
+    params: {
+      location: req.params.location,
+      limit: req.params.limit
+    }
+  })
+  .then(response => {
+    res.send(response.data)
+  })
+  .catch(error => {
+    console.log('error')
+  })
+})
+
 app.get("/businesses", async (req, res) => {
   try {
     const results = await client.query("select * from businesses")
@@ -48,7 +68,11 @@ app.get("/businesses", async (req, res) => {
 
 app.post("/businesses", async (req, res) => {
   try {
-    await client.query("INSERT INTO businesses VALUES ($1, $2, $3, $4, $5, $6, $7)", [req.body.id, req.body.name, req.body.image_url, req.body.url, req.body.rating, req.body.price, req.body.location])
+    // await client.query("INSERT INTO businesses VALUES ($1, $2, $3, $4, $5, $6, $7)"
+    await client.query(
+      "INSERT INTO businesses VALUES ($1, $2, $3, $4, $5, $6, $7) ON CONFLICT (id) DO NOTHING"
+    , [req.body.id, req.body.name, req.body.image_url, req.body.url, req.body.rating, req.body.price, req.body.location])
+    console.log('inserted into database')
   } catch(e) {
     console.log(e)
   }
