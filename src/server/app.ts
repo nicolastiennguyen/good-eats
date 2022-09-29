@@ -67,10 +67,11 @@ app.get("/businesses", async (req, res) => {
 })
 
 app.post("/businesses", async (req, res) => {
+  const { id, name, image_url, url, rating, price, location } = req.body
   try {
     await client.query(
       "INSERT INTO businesses VALUES ($1, $2, $3, $4, $5, $6, $7) ON CONFLICT (id) DO NOTHING"
-    , [req.body.id, req.body.name, req.body.image_url, req.body.url, req.body.rating, req.body.price, req.body.location])
+    , [id, name, image_url, url, rating, price, location])
     console.log('inserted into database')
   } catch(e) {
     console.log(e)
