@@ -6,7 +6,8 @@
     "build": "tsc -p .",
     "dev": "vite",
     "js server": "nodemon build/server/app.js",
-    "server-dev": "nodemon src/server/app.ts"
+    "server-dev": "nodemon src/server/app.ts",
+    "pg": "psql postgres -U nicolasnguyen -f src/database/database.sql"
   },
   "dependencies": {
     "axios": "^0.27.2",
