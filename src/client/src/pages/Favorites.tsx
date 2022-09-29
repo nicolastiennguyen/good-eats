@@ -8,16 +8,7 @@ export function Favorites() {
 
   useEffect(() => {
     axios
-      .get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search`, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          Authorization: `Bearer Gbp5j1Jg21WTUzhuq-P3U5PjDAeXOgChj7q7cshsZkSW_mqueLARN62xNq2Opf8h7jYz8LQ4sgXv8QDOr6h9n72nV8kKOnB-w8jMBHegau_gU4_goqDS8n7lzDYzY3Yx`,
-        },
-        params: {
-          location: "SF",
-          limit: 5
-        },
-      })
+      .get(`http://localhost:4000/yelp/SJ/30`)
       .then((response: AxiosResponse) => {
         setBusinesses(response.data.businesses)
       })
