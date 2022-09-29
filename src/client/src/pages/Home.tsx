@@ -6,10 +6,10 @@ import Business from '../components/Business'
 export function Home() {
   const [businesses, setBusinesses] = useState([]);
   const [randomIndex, setRandomIndex] = useState(0);
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('' || 'SF')
 
   const randomizeIndex = () => {
-    let temp = Math.floor(Math.random() * 50);
+    let temp = Math.floor(Math.random() * 5);
     setRandomIndex(temp);
   }
 
@@ -20,22 +20,12 @@ export function Home() {
   const handleSubmit = (e) => {
     e.preventDefault()
     axios
-    .get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search`, {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        Authorization: `Bearer Gbp5j1Jg21WTUzhuq-P3U5PjDAeXOgChj7q7cshsZkSW_mqueLARN62xNq2Opf8h7jYz8LQ4sgXv8QDOr6h9n72nV8kKOnB-w8jMBHegau_gU4_goqDS8n7lzDYzY3Yx`,
-      },
-      params: {
-        location: `${search}`,
-        limit: 50
-      },
-    })
+    .get(`http://localhost:4000/yelp/${search}/50`)
     .then((response: AxiosResponse) => {
       setBusinesses(response.data.businesses)
     })
     .catch(err => {
-      console.log('error: fetching businesses', err);
-      alert(`No results for "${search}" \nSuggestions for improving your results:\n\u2022 Try a larger search area\n\u2022 Try a different location\n\u2022 Check the spelling or try alternate spellings\n\u2022 Try a more general search, e.g."pizza" instead of "pepperoni"`)
+      console.log(err)
     })
   }
 
@@ -63,30 +53,22 @@ export function Home() {
     .catch((err) => console.log('error posting: ', err))
   }
 
+
   useEffect(() => {
     axios
-      .get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search`, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          Authorization: `Bearer Gbp5j1Jg21WTUzhuq-P3U5PjDAeXOgChj7q7cshsZkSW_mqueLARN62xNq2Opf8h7jYz8LQ4sgXv8QDOr6h9n72nV8kKOnB-w8jMBHegau_gU4_goqDS8n7lzDYzY3Yx`,
-        },
-        params: {
-          location: "SF",
-          limit: 50
-        },
-      })
-      .then((response: AxiosResponse) => {
-        setBusinesses(response.data.businesses)
-      })
-      .catch(err => {
-        console.log('error: fetching businesses', err)
-      })
-      randomizeIndex()
+    .get(`http://localhost:4000/yelp/${search}/5`)
+    .then((response: AxiosResponse) => {
+      setBusinesses(response.data.businesses)
+    })
+    .catch(err => {
+      console.log('useEFFECT error: fetching businesses', err);
+    })
+    randomizeIndex()
   }, [])
 
   return (
     <div>
-      <h1>Welcome to Good Eats!</h1>
+      <h1 className="display-3">Welcome to Good Eats!</h1>
       <h5 className="m-3">Don't know what to eat? Here's an option:</h5>
       <div>
         {renderBusiness(randomIndex)}
