@@ -42,7 +42,7 @@ app.get("/yelp/:location/:limit", (req, res) => {
   axios
   .get(`https://api.yelp.com/v3/businesses/search`, {
     headers: {
-      Authorization: `Bearer Gbp5j1Jg21WTUzhuq-P3U5PjDAeXOgChj7q7cshsZkSW_mqueLARN62xNq2Opf8h7jYz8LQ4sgXv8QDOr6h9n72nV8kKOnB-w8jMBHegau_gU4_goqDS8n7lzDYzY3Yx`,
+      Authorization: `Bearer ${process.env.YELP_API_TOKEN}`,
     },
     params: {
       location: req.params.location,
@@ -68,7 +68,6 @@ app.get("/businesses", async (req, res) => {
 
 app.post("/businesses", async (req, res) => {
   try {
-    // await client.query("INSERT INTO businesses VALUES ($1, $2, $3, $4, $5, $6, $7)"
     await client.query(
       "INSERT INTO businesses VALUES ($1, $2, $3, $4, $5, $6, $7) ON CONFLICT (id) DO NOTHING"
     , [req.body.id, req.body.name, req.body.image_url, req.body.url, req.body.rating, req.body.price, req.body.location])
