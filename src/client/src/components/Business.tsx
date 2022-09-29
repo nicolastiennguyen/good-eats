@@ -36,7 +36,7 @@ export default function Business({ id, name, image_url, url, rating, price, loca
           <div className="fs-3">{name}</div>
           <div className="d-flex">
             <div className="ms-1 text-muted">{
-              location ? `${location.display_address[0]} ${location.display_address[1]}` : null
+              location ? location.display_address ? `${location.display_address[0]} ${location.display_address[1]}` : `${location}` : null
             }</div>
           </div>
             <div className="ms-1 text-muted">Rating: {rating}/5</div>

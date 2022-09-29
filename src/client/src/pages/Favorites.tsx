@@ -15,7 +15,7 @@ export function Favorites() {
         },
         params: {
           location: "SF",
-          limit: 50
+          limit: 5
         },
       })
       .then((response: AxiosResponse) => {
