@@ -9,7 +9,7 @@ export function Home() {
   const [search, setSearch] = useState('' || 'SF')
 
   const randomizeIndex = () => {
-    let temp = Math.floor(Math.random() * 5);
+    let temp = Math.floor(Math.random() * 50);
     setRandomIndex(temp);
   }
 
@@ -42,7 +42,7 @@ export function Home() {
       image_url: `${businesses[randomIndex].image_url}`,
       url: `${businesses[randomIndex].url}`,
       rating: `${businesses[randomIndex].rating}`,
-      price: `${businesses[randomIndex].price}`,
+      price: `${businesses[randomIndex].price}` || null,
       location: `${businesses[randomIndex].location.display_address[0]} ${businesses[randomIndex].location.display_address[1]}`
     }, {
       headers: {
@@ -56,7 +56,7 @@ export function Home() {
 
   useEffect(() => {
     axios
-    .get(`http://localhost:4000/yelp/${search}/5`)
+    .get(`http://localhost:4000/yelp/${search}/50`)
     .then((response: AxiosResponse) => {
       setBusinesses(response.data.businesses)
     })
