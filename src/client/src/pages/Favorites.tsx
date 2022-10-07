@@ -18,7 +18,7 @@ export function Favorites() {
   return (
     <>
       <h1>Favorites</h1>
-      <p>Here are some of our current favorites hand-selected for you!</p>
+      <h5>Some of our current favorites hand-selected for you!</h5>
       <Row xs={1} md={2} lg={3} className="g-3">
         {businesses.map(business => (
           <Col key={business.id}>
