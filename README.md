@@ -1,7 +1,7 @@
 <h1> Good Eats </h1>
 
 ## About
-An application which randomly generates restaurants located near you using Yelp's API. Also features weekly favorites from the staff, as well as the ability to save restaurants for later use.
+Good Eats is an application which randomly generates restaurants located near you using Yelp's API. Also features weekly favorites from the staff, as well as the ability to save restaurants for later use.
 
 ## Tech Stack
   ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
