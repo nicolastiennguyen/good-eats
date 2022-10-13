@@ -11,11 +11,11 @@
 ## About
 Good Eats is an application which randomly generates restaurants located near you using Yelp's API. Also features weekly favorites from the staff, as well as the ability to save restaurants for later use. Inspired by answering the infamous question of "where should we eat?".
 
-### Running Locally
+## Running Locally
 ```
 npm install
 ```
-## In two separate terminals:
+### Then, in two separate terminals:
 ```
 npm run dev
 ```
