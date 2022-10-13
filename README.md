@@ -17,5 +17,6 @@ npm install
 ```
 ### Then, in two separate terminals:
 ```
-npm run dev & npm run server-dev
+npm run dev
+npm run server-dev
 ```
