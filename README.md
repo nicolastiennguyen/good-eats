@@ -15,6 +15,7 @@ Good Eats is an application which randomly generates restaurants located near yo
 ```
 npm install
 ```
+## In two separate terminals:
 ```
 npm run dev
 ```
