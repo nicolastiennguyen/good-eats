@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 
 type BusinessProps = {
   id: number,
@@ -30,7 +30,7 @@ type display_address = {
 export default function Business({ id, name, image_url, url, rating, price, location }: BusinessProps) {
   return (
     <Card className="h-100">
-      <Card.Img className="center-block" variant="top" src={image_url} onClick={() => window.location.href=url} height="500px" style={{ objectFit: "cover", cursor: "pointer" }} />
+      <Card.Img className="center-block" variant="top" src={image_url} alt="restaurant-img" onClick={() => window.location.href=url} height="500px" style={{ objectFit: "cover", cursor: "pointer" }} />
       <Card.Body>
         <Card.Title>
           <div className="fs-3">{name}</div>
