@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios, { AxiosResponse } from 'axios'
-import { Button, Col, Row } from "react-bootstrap"
+import { Button } from "react-bootstrap"
 import Business from '../components/Business'
 
 export function Home() {
