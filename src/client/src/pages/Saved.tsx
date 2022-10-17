@@ -20,7 +20,7 @@ export function Saved() {
   return (
     <div>
       <h1>Saved Restaurants</h1>
-      <h5>Nice choices!</h5>
+      <h5>Recently Saved:</h5>
       <Row xs={1} md={2} lg={3} className="g-3">
         {saved.map(business => (
           <Col key={business.id}>
