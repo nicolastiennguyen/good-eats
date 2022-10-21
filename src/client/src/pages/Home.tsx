@@ -20,13 +20,13 @@ export function Home() {
   const handleSubmit = (e) => {
     e.preventDefault()
     axios
-    .get(`http://localhost:4000/yelp/${search}/50`)
-    .then((response: AxiosResponse) => {
-      setBusinesses(response.data.businesses)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+      .get(`http://localhost:4000/yelp/${search}/50`)
+      .then((response: AxiosResponse) => {
+        setBusinesses(response.data.businesses)
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 
   const handleChange = (e) => {

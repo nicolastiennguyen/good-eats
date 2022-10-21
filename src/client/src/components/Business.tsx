@@ -34,12 +34,12 @@ export default function Business({ id, name, image_url, url, rating, price, loca
         <Card.Title>
           <div className="fs-3">{name}</div>
           <div className="d-flex">
-            <div className="ms-1 text-muted">{
+          <div className="ms-1 text-muted">{
               location ? location.display_address ? `${location.display_address[0]} ${location.display_address[1]}` : `${location}` : null
-            }</div>
+          }</div>
           </div>
-            <div className="ms-1 text-muted">Rating: {rating}/5</div>
-            <div className="ms-1 text-muted">{price}</div>
+          <div className="ms-1 text-muted">Rating: {rating}/5</div>
+          <div className="ms-1 text-muted">{price}</div>
         </Card.Title>
       </Card.Body>
     </Card>
