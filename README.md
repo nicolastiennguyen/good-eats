@@ -11,7 +11,14 @@
 ## About
 Good Eats is an application which randomly generates restaurants located near you using Yelp's API. Also features weekly favorites from the staff, as well as the ability to save restaurants for later use. Inspired by answering the infamous question of "where should we eat?".
 
+
+
 ## Running Locally
+First, retrieve an API Key from https://www.yelp.com/developers/documentation/v3/get_started and going to the sidebar: General > Create App > Login > Manage App > API Key.
+
+Then, locate the .env file and paste in the required inputs.
+
+Once that is complete:
 ```
 npm install
 ```
