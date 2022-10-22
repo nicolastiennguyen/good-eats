@@ -16,7 +16,7 @@ Good Eats is an application which randomly generates restaurants located near yo
 ## Running Locally
 First, retrieve an API Key from https://www.yelp.com/developers/documentation/v3/get_started and going to the sidebar: General > Create App > Login > Manage App > API Key.
 
-Then, locate the .env file and paste in the required inputs.
+Then, locate the .env file and fill in the required inputs.
 
 Once that is complete:
 ```
