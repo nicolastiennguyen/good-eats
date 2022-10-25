@@ -3,7 +3,6 @@ require('dotenv').config()
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-import router from './routes'
 import axios from 'axios'
 
 const { Client } = require('pg');
@@ -26,7 +25,6 @@ async function connect () {
   }
 }
 
-// app.use(router)
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Credentials", "true")
