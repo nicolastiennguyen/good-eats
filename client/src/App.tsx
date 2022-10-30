@@ -1,11 +1,11 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import { Container } from 'react-bootstrap'
-import { Home } from './pages/Home'
-import { Favorites } from './pages/Favorites'
-import { Saved } from './pages/Saved'
-import { About } from './pages/About'
-import { Navbar } from './components/Navbar'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import { Home } from './pages/Home';
+import { Favorites } from './pages/Favorites';
+import { Saved } from './pages/Saved';
+import { About } from './pages/About';
+import { Navbar } from './components/Navbar';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
       </Routes>
     </Container>
-  )
+  );
 }
 
-export default App
+export default App;
