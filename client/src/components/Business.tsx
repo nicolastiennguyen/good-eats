@@ -1,5 +1,5 @@
-import React from "react";
-import { Card } from "react-bootstrap";
+import React from 'react';
+import { Card } from 'react-bootstrap';
 
 type BusinessProps = {
   id: number;
@@ -45,7 +45,7 @@ export default function Business({
         alt="restaurant-img"
         onClick={() => (window.location.href = url)}
         height="500px"
-        style={{ objectFit: "scale-down", cursor: "pointer" }}
+        style={{ objectFit: 'scale-down', cursor: 'pointer' }}
       />
       <Card.Body>
         <Card.Title>
