@@ -9,7 +9,7 @@
   ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 ## About
-Good Eats is an application which generates restaurants located near you using Yelp's Fusion API. Also features weekly favorites from the staff, as well as the ability to save restaurants for later use. Inspired by answering the infamous question of "where should we eat?".
+Good Eats is an application which generates restaurants located near you using Yelp's API. Also features weekly favorites from the staff, as well as the ability to save restaurants for later use. Inspired by answering the infamous question of "where should we eat?".
 
 
 
