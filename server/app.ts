@@ -20,8 +20,8 @@ async function connect() {
   try {
     await client.connect();
     console.log('connected');
-  } catch (e) {
-    console.error(e);
+  } catch (err) {
+    console.error(err);
   }
 }
 
@@ -50,8 +50,8 @@ app.get('/yelp/:location/:limit', (req, res) => {
     .then((response) => {
       res.send(response.data);
     })
-    .catch((error) => {
-      console.log('error');
+    .catch((err) => {
+      console.log(err);
     });
 });
 
@@ -59,8 +59,8 @@ app.get('/businesses', async (req, res) => {
   try {
     const results = await client.query('select * from businesses');
     res.json(results.rows);
-  } catch (e) {
-    console.log(e);
+  } catch (err) {
+    console.log(err);
   }
 });
 
@@ -72,8 +72,8 @@ app.post('/businesses', async (req, res) => {
       [id, name, image_url, url, rating, price, location]
     );
     console.log('inserted into database');
-  } catch (e) {
-    console.log(e);
+  } catch (err) {
+    console.log(err);
   }
 });
 
