@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Business from '../components/Business';
 import axios, { AxiosResponse } from 'axios';
 import { Col, Row } from 'react-bootstrap';
-import Business from '../components/Business';
 
 export function Favorites() {
   const [businesses, setBusinesses] = useState([]);
