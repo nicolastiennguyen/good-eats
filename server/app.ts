@@ -1,9 +1,9 @@
 import express from 'express';
+import axios from 'axios';
 require('dotenv').config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-import axios from 'axios';
 
 const { Client } = require('pg');
 
