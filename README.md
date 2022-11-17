@@ -23,7 +23,7 @@ Once that is complete:
 ```
 npm install
 ```
-Then, in two separate terminals:
+In two separate terminals:
 ```
 npm run dev
 npm run server-dev
