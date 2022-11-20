@@ -10,7 +10,7 @@
   ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 ## About
-Good Eats is an application which finds businesses near you using Yelp's API. You can also search by keyword, category, location, price level, etc. There are weekly favorites featured from the staff, as well as the ability to save businesses for later use. Inspired by answering the infamous question of "where should we eat?".
+Good Eats is an application which finds businesses near you using Yelp's API. You can search by keyword, category, location, price level, etc. There are also weekly favorites featured from the staff, as well as the ability to save businesses for later use. Inspired by answering the infamous question of "where should we eat?".
 
 
 
