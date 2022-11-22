@@ -12,7 +12,7 @@ export function Favorites() {
       .then((response: AxiosResponse) => {
         setBusinesses(response.data.businesses);
       })
-      .catch((err) => console.log('error: fetching businesses', err));
+      .catch((err) => console.log(err));
   }, []);
 
   return (
