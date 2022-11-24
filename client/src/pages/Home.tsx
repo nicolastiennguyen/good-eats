@@ -77,7 +77,7 @@ export function Home() {
       <div>{renderBusiness(randomIndex)}</div>
       <div className="d-flex justify-content-center">
         <Button className="m-3 btn-lg" onClick={saveBusiness}>
-          Looks great! Let me save this.
+          Looks great! Let's save this.
         </Button>
         <Button
           onClick={() => {
