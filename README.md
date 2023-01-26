@@ -12,7 +12,7 @@
 ## About
 Good Eats is an application which locates businesses near you using Yelp's API. You can search by keyword, category, location, price level, etc. There are also weekly favorites featured from the staff, as well as the ability to save businesses for later use. Inspired by answering the infamous question of "where should we eat?".
 
-![Login Page](/docs/Home-Page.png)
+![Login Page](/docs/Home Page.png)
 
 ## Running Locally
 Retrieve an API Key from https://www.yelp.com/developers/documentation/v3/get_started by navigating to General > Create App > Login > Manage App > API Key. From there, locate the .env file in this repository and fill in the required inputs.
