@@ -11,4 +11,4 @@ const Home_1 = require("./pages/Home");
 function App() {
     return ((0, jsx_runtime_1.jsxs)(react_bootstrap_1.Container, Object.assign({ className: "mb-4" }, { children: [(0, jsx_runtime_1.jsx)(Navbar_1.Navbar, {}), (0, jsx_runtime_1.jsxs)(react_router_dom_1.Routes, { children: [(0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/", element: (0, jsx_runtime_1.jsx)(Home_1.Home, {}) }), (0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/favorites", element: (0, jsx_runtime_1.jsx)(Favorites_1.Favorites, {}) }), (0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/saved", element: (0, jsx_runtime_1.jsx)(Saved_1.Saved, {}) }), (0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/about", element: (0, jsx_runtime_1.jsx)(About_1.About, {}) })] })] })));
 }
-exports.default = App;
+exports.default = App
