@@ -17,11 +17,11 @@ Good Eats is an application which locates businesses near you using Yelp's API. 
 ## Running Locally
 Retrieve an API Key from https://www.yelp.com/developers/documentation/v3/get_started: General > Create App > Login > Manage App > API Key. From there, locate the .env file in this repository and fill in the required inputs.
 
-Once that is complete:
+Then:
 ```
 npm install
 ```
-Then, in two separate terminals:
+In two separate terminals:
 ```
 npm run dev
 npm run server-dev
