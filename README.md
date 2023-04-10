@@ -15,7 +15,7 @@ Good Eats locates businesses near you using Yelp's API. You can search by keywor
 ![Login Page](/docs/Home%20Page.png)
 
 ## Running Locally
-Retrieve an API Key from https://www.yelp.com/developers/documentation/v3/get_started: General > Create App > Login > Manage App > API Key. From there, locate the .env file in this repository and fill in the required inputs.
+Retrieve an API Key from https://www.yelp.com/developers/documentation/v3/get_started: General > Create App > Login > Manage App > API Key. Locate the .env file and fill in the required inputs.
 
 Then:
 ```
